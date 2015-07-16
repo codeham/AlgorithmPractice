@@ -59,18 +59,53 @@ public class AlgorithmArrays {
 		}
 
 		/*
-		 * The user is asking for the size of the array
-		 * Prompt the user to input an integer as a length for then array
-		 * Scan through the array and insert the number inside the array
-		 * 
+		 * The user is asking for the size of the array Prompt the user to input
+		 * an integer as a length for then array Scan through the array and
+		 * insert the number inside the array
 		 */
 		System.out.println("What is the size of the array?");
 		for (int index = 0; index < arrayTwo.length; ++index) {
 			arrayTwo[index] = k.nextInt();
-			System.out.println("The number you chose and placed inside the Array now is" + " "
-					+ arrayTwo[index]);
+			System.out
+					.println("The number you chose and placed inside the Array now is"
+							+ " " + arrayTwo[index]);
 
 		}
+
+		/*
+		 * Finding the max and min inside of an array with numbers
+		 */
+
+		int[] arrayThree = { 10, 10, 30, 2, 3, 4, -22 };
+		int max;
+
+		// Initialize Current Maximum
+		max = arrayThree[0];
+
+		// Scan the array
+		for (int index = 0; index < arrayThree.length; index++) {
+			// Examine the current element
+			if (arrayThree[index] > max)
+				// If it is the largest so far, change max
+				max = arrayThree[index];
+		}
+		System.out.println("The maximum of the array is" + " " + max);
+
+		/*
+		 * Finding the minimum of a variable
+		 */
+		//Setup temp. variable
+		//The way this Algorithm Works 
+		//Compare the first element of the array with the rest of the elements
+		//If the first element is greater than the second, replace the temp variable with
+		//that number smaller than the first element, keep looping through the array.....
+		int min = arrayThree[0];
+		for (int index = 1; index < arrayThree.length; ++index){
+			if ( min > arrayThree[index] ){
+				min = arrayThree[index];
+			}
+		}
+		System.out.println("The Minumum Number In The Array Is" + " " + min);
 	}
 
 }
